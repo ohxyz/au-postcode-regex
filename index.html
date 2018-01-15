@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Australian Postcode Regex</title>
+    <meta name="description" content="Australian postcode regex">
+    <meta name="author" content="Ohxyz">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <script>
+        // NSW: 1000 - 2599
+        var nsw1 = /1[0-9][0-9][0-9]|2[0-5][0-9][0-9]/;
+
+        // NSW: 2620 - 2899
+        var nsw2 = /2(6[2-9][0-9]|[7-8][0-9][0-9])/;
+
+        // NSW: 2921 - 2999
+        var nsw3 = /29(2[1-9]|[3-9][0-9])/;
+
+        // Vic: 3000 - 3999, 8000 - 8999
+        var vic = /(3|8)[0-9][0-9][0-9]/;
+
+        // Qld: 4000 - 4999, 9000 - 9999
+        var qld = /(4|9)[0-9][0-9][0-9]/;
+
+        // SA: 5000 - 5999
+        var sa = /5[0-9][0-9][0-9]/;
+
+        // WA: 6000 - 6999
+        var wa = /6[0-9][0-9][0-9]/;
+
+        // Tas: 7000 - 7999
+        var tas = /7[0-9][0-9][0-9]/;
+
+        // ACT: 0200 - 0299
+        var act1 = /02[0][9]/;
+
+        // ACT: 2600 - 2619
+        var act2 = /26[0-1][0-9]/;
+
+        // ACT: 2900 - 2920
+        var act3 = /29([0-1][0-9]|20)/;
+
+        // NT: 0800 - 0999
+        var nt = /0[8-9][0-9][0-9]/;
+
+        // Small => Big
+
+        /*  Reference: https://auspost.com.au/business/marketing-and-communications/access-data-and-insights/address-data/postcode-data
+         *
+         *  0800 ... 0999, 1000 ... 2599, 2600 ... 2619, 2620 ... 2899, 2900 ... 2920, 2921 ... 2999, =>
+         *   |         |    |         |    |         |    |         |    |         |    |         |    
+         *   +-- ACT --+    +-- NSW --+    +-- ACT --+    +-- NSW --+    +-- ACT --+    +-- NSW --+
+         *
+         *
+         *  => 3000 ... 3999, 4000 ... 4999, 5000 ... 5999, 6000 ... 6999, 7000 ... 7999, 8000 ... 8999, 9000 ... 9999
+         *
+         *
+         *  
+         *  => So, the postcode range is 0800 ~ 9999
+         */
+
+         var postcodeRegex = /0[8-9][0-9][0-9]|[1-9][0-9][0-9][0-9]/;
+    </script>
+</body>
+</html>
