@@ -1,14 +1,14 @@
 # Australian Postcode Regular Expression - AU Postcode Regex
 
-## Regex for all postcodes
+### Regex for all postcodes
 
 `/0[8-9][0-9][0-9]|[1-9][0-9][0-9][0-9]/`
 
-## Source
+### Source
 
 https://auspost.com.au/business/marketing-and-communications/access-data-and-insights/address-data/postcode-data
 
-## Postcodes by state
+### Postcodes by state
 
     0800 ... 0999, 1000 ... 2599, 2600 ... 2619, 2620 ... 2899, 2900 ... 2920, 2921 ... 2999,
      |         |    |         |    |         |    |         |    |         |    |         |    
